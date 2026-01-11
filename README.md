@@ -152,6 +152,21 @@ python aggregator.py --judgments_dir ./results/judgments/gpt-4o --evaluations_di
 - ```--judgments_dir:``` The path to the directory containing the judgments.
 - ```--evaluations_dir:``` The path to the directory where the aggregated results (in JSON format) will be saved.
 
-## Citation
+## Reference
 
 [Emanuel A. Schegloff, *Sequence Organization in Interaction: A Primer in Conversation Analysis* (Cambridge University Press, 2007)](https://www.cambridge.org/core/books/sequence-organization-in-interaction/276CD30E23D3444114A90E5E2B24D55F)
+
+## How to cite this work
+
+If you use this dataset in your research, please cite it as follows:
+
+### BibTeX
+```bibtex
+@dataset{your_dataset_name_2026,
+  author       = {Your Name or Organization},
+  title        = {Your Dataset Name},
+  year         = {2026},
+  url          = {https://huggingface.co/datasets/your-dataset-repo},
+  version      = {1.0.0},
+}
+
