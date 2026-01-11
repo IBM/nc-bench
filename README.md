@@ -1,4 +1,4 @@
-# Natural Conversation Benchmarks
+# Natural Conversation Benchmarks (NC-Bench)
 
 ## Overview
 
@@ -162,9 +162,9 @@ If you use this dataset in your research, please cite it as follows:
 
 ### BibTeX
 ```bibtex
-@dataset{your_dataset_name_2026,
-  author       = {Your Name or Organization},
-  title        = {Your Dataset Name},
+@dataset{nc_bench_moore_2026,
+  author       = {Moore, R., An, S., Ahmed, F., Gala, J.},
+  title        = {NC-Bench: An LLM Benchmark for Evaluating Conversational Competence},
   year         = {2026},
   url          = {https://huggingface.co/datasets/your-dataset-repo},
   version      = {1.0.0},
