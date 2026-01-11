@@ -4,39 +4,6 @@
 
 The Natural Conversation Benchmarks (NC-Bench) aim to answer the question: How well can generative AI converse like humans do? In other words, the benchmarks begin to measure the general conversational competence of large language models (LLMs). They do this by testing models' ability to generate an appropriate type of conversational action, or dialogue act, in response to a particular sequence of actions. The sequences of conversational actions, or patterns, are adapted from conversation science, specifically the model of sequence organization in the field of conversation analysis (Schegloff, 2007) and the pattern library of IBM Natural Conversation Framework ([book](https://dl.acm.org/doi/abs/10.1145/3304087)). Models are tested by generating the next line in a transcript. NC-Bench is a lightweight method that is easily extensible to more conversation patterns.
 
-## Natural Conversation Benchmarks
-
-The initial set of benchmarks (Set 1) test how well models can perform three basic conversational actions: providing answers, modifying answers and transitioning to a new sequence. The answering tests include three different ways of completing an inquiry sequence (i.e., producing a 2nd pair part to a base adjacency pair): simple answer, incremental request and self-correction. In the first, the model should generate a straightforward answer to an inquiry. In the second, the model should give a second answer after the user produces a second inquiry (dependent on the first for its meaning) merely by changing a detail from the initial inquiry. And in the third, it should provide an alternative answer after the user corrects the initial inquiry into an alternative inquiry.
-The repairing tests include four different types of conversational repairs: repeating, paraphrasing, defining and giving examples. In the first, the model should repeat the agent's prior response using the same words. In the second, the model should paraphrase the agent's prior turn using different, simpler words and phrases. In the third, it should provide a definition of a problematic keyword in the agent's prior response. And in the fourth, it should give an example of what the agent said in a prior response.
-Finally, the closing tests include two ways of ending an inquiry sequence: closing and aborting. In the first, the model should acknowledge the user's move to close the sequence instead of continuing to answer. In the second, the model should acknowledge the user's move to cancel the sequence and move on.
-
-## A Benchmark Framework
-
-Grounding our benchmark approach in the [IBM Natural Conversation Framework](NCF) provides extensibility. Not only does the NCF contain over 120 patterns in its library, but its adaptation of the literature and methods of Conversation Analysis mean that additional patterns can be added systematically. The table below contains our roadmap for extending the benchmarks to new patterns.
-
-| Pattern Sets | Answering | Repairing | Closing | Eliciting | Preliminary | Informing |
-|-------------|-----------|-----------|---------|-----------|------------|---------|
-| **1**       | Inquiry  | Repeat    | Sequence Closer |   |   |   |
-|             | Incremental Request | Paraphrase | Sequence Abort |   |   |   |
-|             | Self-Correction | Example |   |   |   |   |
-|             |   | Definition |   |   |   |   |
-| **2**       | Inquiry RAG | Repeat RAG | Sequence Closer RAG |   |   |   |
-|             | Inquiry RAG Ungrounded | Paraphrase RAG | Sequence Abort RAG |   |   |   |
-|             | Incremental-Self-Correction RAG | Example RAG |   |   |   |   |
-|             |   | Definition RAG |   |   |   |   |
-| **3**       | Recommendation | Mixed |   | Elicit All | Detail Giving |   |
-|             | Expanded Recommendation |   | Elicit Missing | Screening |   |   |
-|             | Incremental Recommendation |   | Choices |   |   |   |
-
-
-Table: Sets of Natural Conversation Benchmark Patterns
-
-Set 1 – Patterns that capture basic practices of sequence management: answering inquiries, repairing answers, and closing pair sequences. This set uses ordinary conversational use cases and does NOT include passages for retrieval augmented generation (RAG). (See results above).
-
-Set 2 – Sequence management patterns from Set 1 but with the inclusion of a passage of information for RAG. Determining the faithfulness of the models' responses to the passage are not a primary goal. Instead, the goal is to determine if the model can maintain the conversation pattern in the face of a document context, which contains a competing language style and format. The uses cases in this set involve information giving using Wikipedia as a source.
-
-Set 3 – Sequence management patterns involving complex requests. Such requests require the agent to elicit details from the fictional user (for example, slot filling). Other patterns involve preliminaries to the inquiry-answer pair (i.e., pre-expansions). These use cases are business related. 
-
 ## How to run the benchmark
 
 ### 1. **Clone the Repository**
