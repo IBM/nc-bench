@@ -1,0 +1,170 @@
+NCB Patterns
+(adapted from the IBM NCF https://alma.dal1a.ciocloud.nonprod.intranet.ibm.com/patterns/Overview)
+
+
+Set 1: Answering, Repairing, Closing
+
+ANSWERING PATTERNS
+
+Inquiry (User) (NCF A1.0)
+
+Pattern
+1 USER:  INQUIRY
+2 AGENT: ANSWER
+
+Example
+1 USER:  Are there many idioms in english?
+2 AGENT: Yes, English has a vast array of idioms.
+
+Correct Response Types: Answer, NonAnswer, Definition, Repeat Request, Paraphrase Request, Example Request, Definition Request
+
+---
+
+Incremental Request (NCF A2.9)
+
+Pattern
+1 USER:  INQUIRY
+2 AGENT: ANSWER
+3 USER:  INCREMENTAL REQUEST
+4 AGENT: SUBESQUENT ANSWER
+
+Example
+1 USER:  What's the weather like today?
+2 AGENT: It's 75 degrees and sunny.
+3 USER:  What about tomorrow?
+4 AGENT: Tomorrow is expected to be cooler, around 68 degrees with a chance of rain.
+
+Correct Response Types: Answer, NonAnswer, Definition, Repeat Request, Paraphrase Request, Example Request, Definition Request
+
+---
+
+Self-Correction (NCF B3.1.0)
+
+Pattern
+1 USER:  INQUIRY
+2 AGENT: ANSWER
+3 USER:  SELF-CORRECTION
+4 AGENT: ALTERNATIVE RESPONSE 
+
+Example
+1 USER:  What's the balance of my account?
+2 AGENT: It's $245.
+3 USER:  No, I mean the balance of my savings account.
+4 AGENT: Apologies for the confusion. The balance of your savings account is $5,200.
+
+Correct Response Types: Answer, NonAnswer, Definition, Repeat Request, Paraphrase Request, Example Request, Definition Request
+
+---
+
+REPAIRING PATTERNS
+
+Repeat Request (NCF B2.1.0)
+
+Pattern
+1 USER:  INQUIRY
+2 AGENT: ANSWER 
+2 USER:  REPEAT REQUEST 
+3 AGENT: REPEAT
+
+Example
+1 USER:  What type of music do you like to listen to?
+2 AGENT: I'm really into K-pop right now!
+3 USER:  What did you say?
+4 AGENT: I said I'm really into K-pop right now!
+
+Correct Response Types: Repeat, Partial Repeat
+
+---
+
+Paraphrase Request (NCF B2.4.0)
+
+Pattern
+1 USER:  INQUIRY
+2 AGENT: ANSWER 
+2 USER:  PARAPHRASE REQUEST 
+3 AGENT: PARAPHRASE
+
+Example
+1 USER:  My coworker said you can get rich by buying Bitcoin. I'm thinking of doing it!
+2 AGENT: Do you also believe in Santa Claus and the Tooth Fairy?
+3 USER:  What do you mean?
+4 AGENT: Investing in Bitcoin is risky and not guaranteed to make you rich. It's like gambling, not a sure bet.
+
+Correct Response Types: Paraphrase, Definition, Example
+
+---
+
+Definition Request (NCF B2.5.0)
+
+Pattern
+1 USER:  INQUIRY
+2 AGENT: ANSWER 
+2 USER:  DEFINTION REQUEST 
+3 AGENT: DEFINITION
+
+Example
+1 USER: What did you need to talk about?
+2 AGENT: I have some questions about my dossier.
+3 USER: What's a dossier?
+4 AGENT: A dossier is a collection of information about someone or something.
+
+Correct Response Types: Definition
+
+---
+
+Example Request (NCF B2.6.0)
+
+Pattern
+1 USER:  INQUIRY
+2 AGENT: ANSWER 
+2 USER:  EXAMPLE REQUEST 
+3 AGENT: EXAMPLE
+
+Example
+1 USER:  Have you been to Paris before?
+2 AGENT: Many times. There are so many attractions worth visiting!
+3 USER:  What are some examples?
+4 AGENT: The Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral are must-sees.
+
+Correct Response Types: Example
+
+---
+
+CLOSING PATTERNS
+
+Sequence Closer (NCF B4.0)
+
+Pattern
+1 USER:  INQUIRY
+2 AGENT: RESPONSE
+3 USER:  ACKNOWLEDGMENT/ASSESSMENT/LAUGHTER
+4 AGENT: LAST TOPIC CHECK/NO RESPONSE
+
+Example
+1 USER:  What is my out-of-pocket maximum?
+2 AGENT: Your out-of-pocket maximum is $3000.
+3 USER:  All right.
+4 AGENT: Is there anything else you'd like to know?
+
+Correct Response Types: Pre-Closing, Silence, New Topic, NonVerbal, Acknowledgment, Assessment, Gratitude Receipt
+
+---
+
+Closing
+
+Sequence Abort (NCF B5.0)
+
+Pattern
+1 USER:  INQUIRY
+2 AGENT: RESPONSE
+3 USER:  ABORT
+4 AGENT: ACKNOWLEDGMENT
+
+Example
+1 USER:  Do you know anything about health food?
+2 AGENT: I don't really eat health food.
+3 USER:  Never mind.
+4 AGENT: Is there anything else you'd like to know?
+
+
+Correct Response Types: 'PreClosing', 'Silence', 'GratitudeReceipt', 'Acknowledgment', 'NewTopic', 'Apology
