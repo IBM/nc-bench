@@ -162,11 +162,10 @@ If you use this dataset in your research, please cite it as follows:
 
 ### BibTeX
 ```bibtex
-@dataset{nc_bench_moore_2026,
-  author       = {Moore, R., An, S., Ahmed, F., Gala, J.},
-  title        = {NC-Bench: An LLM Benchmark for Evaluating Conversational Competence},
-  year         = {2026},
-  url          = {https://huggingface.co/datasets/your-dataset-repo},
-  version      = {1.0.0},
+@article{moore2026ncbench,
+  title={NC-Bench: An LLM Benchmark for Evaluating Conversational Competence},
+  author={Moore, Robert J. and An, Sungeun and Ahmed, Farhan and Gala, Jay Pankaj},
+  journal={arXiv preprint arXiv:2601.06426},
+  year={2026}
 }
 
