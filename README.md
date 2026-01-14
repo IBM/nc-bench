@@ -162,9 +162,10 @@ If you use this dataset in your research, please cite it as follows:
 
 ### BibTeX
 ```bibtex
-@misc{moore2026ncbench,
+@article{moore2026ncbench,
       title={NC-Bench: An LLM Benchmark for Evaluating Conversational Competence}, 
       author={Robert J. Moore and Sungeun An and Farhan Ahmed and Jay Pankaj Gala},
+      journal={arXiv preprint arXiv:2601.06426},
       year={2026},
       eprint={2601.06426},
       archivePrefix={arXiv},
